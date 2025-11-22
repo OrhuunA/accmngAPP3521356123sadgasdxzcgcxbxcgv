@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.13
+
 import customtkinter as ctk
 import json
 import os
@@ -31,8 +31,6 @@ RANK_COLORS = {
     "DIAMOND": "#b9f2ff", "MASTER": "#9b59b6", "GRANDMASTER": "#c0392b",
     "CHALLENGER": "#F1C40F", "UNRANKED": "gray"
 }
-
-# --- KRİTİK DÜZELTMELER ---
 
 def resource_path(relative_path):
     """EXE olunca dosyaları geçici klasörde bulur"""
@@ -354,14 +352,12 @@ class LolManagerApp(ctk.CTk):
     
     def load_icons(self):
         self.icons = {}
-        # --- RESOURCE PATH KULLANIMI (EXE için Şart) ---
         assets_dir = resource_path("assets")
         
         def get_img(filename, size):
             path = os.path.join(assets_dir, filename)
-            # .exe içinde yol farklı olabilir, o yüzden hem direkt hem assets/ dene
             if not os.path.exists(path): 
-                path = os.path.join(os.path.abspath("."), "assets", filename) # Yedek yol
+                path = os.path.join(os.path.abspath("."), "assets", filename) 
 
             if os.path.exists(path):
                 return ctk.CTkImage(light_image=Image.open(path), dark_image=Image.open(path), size=size)
@@ -383,7 +379,6 @@ class LolManagerApp(ctk.CTk):
         
         for tier in tiers:
             path = os.path.join(rank_dir, f"{tier}.png")
-            # Yedek yol kontrolü
             if not os.path.exists(path): 
                 path = os.path.join(os.path.abspath("."), "assets", "ranks", f"{tier}.png")
 
