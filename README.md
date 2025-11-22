@@ -8,7 +8,7 @@
 
 ---
 
-## 🇹🇷 TÜRKÇE (Turkish)
+## TÜRKÇE (Turkish)
 
 ### 🌟 Özellikler
 * **Rank Takibi:** Tüm hesaplarınızın güncel Lig, Aşama ve LP bilgilerini anlık çeker.
@@ -34,7 +34,7 @@ Uygulamanın verileri çekebilmesi için kendi anahtarınıza ihtiyacınız vard
 
 ---
 
-## 🇬🇧 ENGLISH
+## ENGLISH
 
 ### 🌟 Features
 * **Rank Tracking:** Instantly fetches current Rank, Tier, and LP info for all accounts.
